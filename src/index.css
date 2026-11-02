@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --swiss-white: #ffffff;
+    --swiss-black: #000000;
+    --swiss-red: #ff0000;
+    --swiss-gray-50: #fafafa;
+    --swiss-gray-100: #f4f4f4;
+    --swiss-gray-200: #e5e5e5;
+    --swiss-gray-400: #a3a3a3;
+    --swiss-gray-600: #525252;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: -0.02em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: #ff0000;
+    color: #ffffff;
+  }
+}
+
+/* Custom Swiss utility classes */
+.font-swiss {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.font-mono-swiss {
+  font-family: 'Space Mono', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* Crisp button active/hover feedback */
+.swiss-btn {
+  position: relative;
+  transition: all 0.15s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.swiss-btn:hover {
+  transform: translate(-1px, -1px);
+}
+
+.swiss-btn:active {
+  transform: translate(1px, 1px);
+}
+
+/* Stark grid lines */
+.grid-rule-b {
+  border-bottom: 1px solid #000000;
+}
+
+.grid-rule-t {
+  border-top: 1px solid #000000;
+}
+
+.grid-rule-r {
+  border-right: 1px solid #000000;
+}
+
+.grid-rule-l {
+  border-left: 1px solid #000000;
+}
